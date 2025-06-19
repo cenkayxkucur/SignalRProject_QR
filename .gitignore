@@ -1,0 +1,48 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build results
+bin/
+obj/
+out/
+[Bb]uild/
+[Ll]og/
+TestResults/
+*.log
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+*.nuspec
+
+# User-specific files
+*.userosscache
+*.sln.docstates
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Rider
+.idea/
+*.sln.iml
+
+# ASP.NET/Blazor specific
+wwwroot/dist/
+wwwroot/node_modules/
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Others
+*.dbmdl
+*.bak
+*.swp
+*.tmp
+*.vspscc
+*.vssscc
+_ReSharper*/
