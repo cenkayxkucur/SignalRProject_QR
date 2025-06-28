@@ -66,7 +66,7 @@ namespace SignalRApi.Controllers
             _productService.TDelete(value);
             return Ok(value);
         }
-        [HttpGet("GetProduct")]
+        [HttpGet("{id}")]
         public IActionResult GetProduct(int id)
         {
             var value = _mapper.Map<ResultProductDto>(_productService.TGetById(id));
@@ -82,7 +82,8 @@ namespace SignalRApi.Controllers
                 ProductDescription = updateProductDto.ProductDescription,
                 ProductPrice = updateProductDto.ProductPrice,
                 ProductImageUrl = updateProductDto.ProductImageUrl,
-                ProductStatus = updateProductDto.ProductStatus
+                ProductStatus = updateProductDto.ProductStatus,
+                CategoryID = updateProductDto.CategoryID
 
             });
 

@@ -1,0 +1,59 @@
+﻿@model UpdateProductDto
+@{
+    ViewData["Title"] = "UpdateProduct";
+    Layout = "~/Views/AdminLayoutController/Index.cshtml";
+}
+
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Ürün İşlemleri</h4>
+		<div class="row">
+			<div class="col-md-12">
+				<form method="post">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Ürün Güncelleme Sayfası</div>
+						</div>
+                        <input type="hidden" asp-for="ProductID" />
+						<div class="card-body">
+							<div class="form-group">
+								<label for="ProductName">Ürün Adını Girinz</label>
+								<input type="text" class="form-control" asp-for="ProductName" id="ProductName" placeholder="Ürün Adı">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="ProductPrice">Ürün Fiyatını Giriniz</label>
+								<input type="text" class="form-control" asp-for="ProductPrice" id="ProductPrice" placeholder="Ürün Fiyatı">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="ProductImageUrl">Ürün Görselini Giriniz</label>
+								<input type="text" class="form-control" asp-for="ProductImageUrl" id="ProductImageUrl" placeholder="Ürün Görseli">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="CategoryName">Ürün Kategorisini Seçiniz</label>
+								@Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.v,
+																	new { @class = "form-control" })
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="ProductDescription">Ürün Açıklamasını Giriniz</label>
+								<input type="text" class="form-control" asp-for="ProductDescription" id="ProductDescription" placeholder="Ürün Açıklaması">
+							</div>
+						</div>
+						<div class="card-action">
+							<button class="btn btn-primary">Ürünü Güncelle</button>
+
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
