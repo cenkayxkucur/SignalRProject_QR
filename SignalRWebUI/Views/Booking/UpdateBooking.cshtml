@@ -1,0 +1,60 @@
+﻿@model UpdateBookingDto
+@{
+    ViewData["Title"] = "UpdateBooking";
+    Layout = "~/Views/AdminLayoutController/Index.cshtml";
+}
+
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Rezervasyon İşlemleri</h4>
+		<div class="row">
+			<div class="col-md-12">
+				<form method="post">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Rezervasyon Güncelleme Sayfası</div>
+						</div>
+						<input type="hidden" asp-for="BookingId" />
+						<div class="card-body">
+							<div class="form-group">
+								<label for="BookingName">Rezervasyon Ad Soyad</label>
+								<input type="text" class="form-control" asp-for="BookingName" id="BookingName" placeholder="Rezervasyon Ad Soyad">
+
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="BookingPhone">Rezervasyon Numarası</label>
+								<input type="text" class="form-control" asp-for="BookingPhone" id="BookingPhone" placeholder="Rezervasyon Numarası">
+
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="BookingEmail">Rezervasyon Email Adresi</label>
+								<input type="email" class="form-control" asp-for="BookingEmail" id="BookingEmail" placeholder="Rezervasyon Email Adresi">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="BookingPersonCount">Rezervasyon Kişi Sayısı</label>
+								<input type="number" class="form-control" asp-for="BookingPersonCount" id="BookingPersonCount" placeholder="Rezervasyon Kişi Sayısı">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="BookingDate">Rezervasyon Tarihi</label>
+								<input type="date" class="form-control" asp-for="BookingDate" id="BookingDate" placeholder="Rezervasyon Tarihi">
+							</div>
+						</div>
+						<div class="card-action">
+							<button class="btn btn-primary">Rezervasyon Güncelle</button>
+
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>

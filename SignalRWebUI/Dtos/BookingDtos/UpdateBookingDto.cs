@@ -1,4 +1,4 @@
-﻿namespace SignalRWebUI.Dtos.BookingDto
+﻿namespace SignalRWebUI.Dtos.BookingDtos
 {
     public class UpdateBookingDto
     {
