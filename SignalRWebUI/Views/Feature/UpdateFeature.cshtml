@@ -1,0 +1,60 @@
+﻿@model UpdateFeatureDto
+@{
+    ViewData["Title"] = "UpdateFeature";
+    Layout = "~/Views/AdminLayoutController/Index.cshtml";
+}
+
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Öne Çıkan Alan İşlemleri</h4>
+		<div class="row">
+			<div class="col-md-12">
+				<form method="post">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Öne Çıkan Alan Güncelleme Sayfası</div>
+						</div>
+						<div class="card-body">
+                            <input type="hidden" asp-for="FeatureID" />
+							<div class="form-group">
+								<label for="FeatureTitle1">1.Başlığı Giriniz</label>
+								<input type="text" class="form-control" asp-for="FeatureTitle1" id="FeatureTitle1" placeholder="1.Başlık">
+
+							</div>
+							<div class="form-group">
+								<label for="FeatureDescription1">1.Açıklamayı Giriniz</label>
+								<input type="text" class="form-control" asp-for="FeatureDescription1" id="FeatureDescription1" placeholder="1.Açıklama">
+							</div>
+							<div class="form-group">
+								<label for="FeatureTitle2">2.Başlığı Giriniz</label>
+								<input type="text" class="form-control" asp-for="FeatureTitle2" id="FeatureTitle2" placeholder="2.Başlık">
+
+							</div>
+							<div class="form-group">
+								<label for="FeatureDescription2">2.Açıklamayı Giriniz</label>
+								<input type="text" class="form-control" asp-for="FeatureDescription2" id="FeatureDescription2" placeholder="2.Açıklama">
+							</div>
+							<div class="form-group">
+								<label for="FeatureTitle3">3.Başlığı Giriniz</label>
+								<input type="text" class="form-control" asp-for="FeatureTitle3" id="FeatureTitle3" placeholder="3.Başlık">
+
+							</div>
+							<div class="form-group">
+								<label for="FeatureDescription3">3.Açıklamayı Giriniz</label>
+								<input type="text" class="form-control" asp-for="FeatureDescription3" id="FeatureDescription3" placeholder="3.Açıklama">
+							</div>
+
+
+						</div>
+						<div class="card-action">
+							<button class="btn btn-primary">Öne Çıkan Alan Güncelle</button>
+
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
+

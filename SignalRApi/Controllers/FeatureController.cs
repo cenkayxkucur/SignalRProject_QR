@@ -40,14 +40,14 @@ namespace SignalRApi.Controllers
             return Ok("Feature created successfully.");
 
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteFeature(int id)
         {
             var value = _featureService.TGetById(id);
             _featureService.TDelete(value);
             return Ok(value);
         }
-        [HttpGet("GetFeature")]
+        [HttpGet("{id}")]
         public IActionResult GetFeature(int id)
         {
             var value = _mapper.Map<ResultFeatureDto>(_featureService.TGetById(id));
