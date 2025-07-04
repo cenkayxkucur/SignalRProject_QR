@@ -18,5 +18,23 @@ namespace SignalR.DataAccessLayer.EntityFramework
             var values= context.Products.Include(x => x.Category).ToList();
             return values;
         }
+
+        public int ProductCount()
+        {
+            using var context = new SignalRContext();
+            return context.Products.Count();
+        }
+
+        public int ProductCountByCategoryNameDrink()
+        {
+            using var context = new SignalRContext();
+            return context.Products.Where(x => x.CategoryID==(context.Categories.Where(y => y.CategoryName=="İçecek").Select(z => z.CategoryID).FirstOrDefault())).Count();
+        }
+
+        public int ProductCountByCategoryNameHamburger()
+        {
+            using var context = new SignalRContext();
+            return context.Products.Where(x => x.CategoryID == (context.Categories.Where(y => y.CategoryName == "Hamburger").Select(z => z.CategoryID).FirstOrDefault())).Count();
+        }
     }
 }
