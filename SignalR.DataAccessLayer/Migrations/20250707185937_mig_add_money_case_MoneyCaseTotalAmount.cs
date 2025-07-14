@@ -10,19 +10,13 @@ namespace SignalR.DataAccessLayer.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.RenameColumn(
-                name: "TotalAmount",
-                table: "MoneyCases",
-                newName: "MoneyCaseTotalAmount");
+           
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.RenameColumn(
-                name: "MoneyCaseTotalAmount",
-                table: "MoneyCases",
-                newName: "TotalAmount");
+        
         }
     }
 }
