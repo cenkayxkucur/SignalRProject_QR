@@ -53,6 +53,9 @@
 				connection.on("ReceiveProductNameByMaxPrice",(value8) => {
 					$("#productnamebymaxprice").text(value8);
 				});
+				connection.on("ReceiveProductNameByMinPrice",(value9) => {
+					$("productnamebyminprice").text(value9);
+				});
 			});
 		</script>
 
@@ -226,13 +229,13 @@
 						<div class="row">
 							<div class="col-5">
 								<div class="icon-big text-center">
-									<i class="la la-users"></i>
+									<i class="la la-tripadvisor"></i>
 								</div>
 							</div>
 							<div class="col-7 d-flex align-items-center">
 								<div class="numbers">
-									<p class="card-category">Visitors</p>
-									<h4 class="card-title">1,294</h4>
+									<p class="card-category">En Ucuz Ürün</p>
+									<h4 class="card-title" id="productnamebyminprice"></h4>
 								</div>
 							</div>
 						</div>
