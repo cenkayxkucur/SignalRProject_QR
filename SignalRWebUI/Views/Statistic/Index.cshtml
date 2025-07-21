@@ -65,6 +65,9 @@
 				connection.on("ReceiveActiveOrderCount",(value12) => {
 					$("#receiveactiveordercount").text(value12);
                 });
+				connection.on("ReceiveLastOrderPrice",(value13) => {
+					$("#lastorderprice").text(value13);
+                });
 			});
 		</script>
 
@@ -324,8 +327,8 @@
 							</div>
 							<div class="col-7 d-flex align-items-center">
 								<div class="numbers">
-									<p class="card-category">Visitors</p>
-									<h4 class="card-title">1,294</h4>
+									<p class="card-category">Son Sipariş</p>
+									<h4 class="card-title" id="lastorderprice"></h4>
 								</div>
 							</div>
 						</div>

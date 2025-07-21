@@ -54,6 +54,9 @@ namespace SignalRApi.Hubs
 
             var value12 = _orderService.TActiveOrderCount();
             await Clients.All.SendAsync("ReceiveActiveOrderCount", value12);
+            
+            var value13 = _orderService.TLastOrderPrice();
+            await Clients.All.SendAsync("ReceiveLastOrderPrice", value13.ToString("0.00") + "₺");
         }
         
     }
