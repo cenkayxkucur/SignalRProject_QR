@@ -9,14 +9,13 @@ namespace SignalR.EntityLayer.Entities
     public class Basket
     {
         public int BasketID { get; set; }
-        public string ProductName { get; set; }
         public decimal ProductPrice { get; set; }
         public decimal BasketProductCount { get; set; }
         public decimal BasketProductTotalPrice { get; set; }
         public int ProductID { get; set; }
         public Product Product { get; set; }
         public int MenuTableID { get; set; }
-        public MenuTable MenuTable { get; set; }
+        public MenuTable MenuTables { get; set; }
 
     }
 }
