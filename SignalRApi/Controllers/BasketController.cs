@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SignalR.BusinessLayer.Abstract;
+using SignalR.DataAccessLayer.Concrete;
+using SignalRApi.Models;
 namespace SignalRApi.Controllers
 {
     [Route("api/[controller]")]
@@ -19,6 +22,21 @@ namespace SignalRApi.Controllers
             var values = _basketService.TGetBasketByMenuTableNumber(id);
             return Ok(values);
         }
-
+        [HttpGet("BasketListByMenuTableWithProductName")]
+        public IActionResult BasketListByMenuTableWithProductName(int id)
+        {
+            using var context = new SignalRContext();
+            var values = context.Baskets.Include(x => x.Product).Where(y => y.MenuTableID == id).Select(z => new ResultBasketListWithProducts
+            {
+                BasketID = z.BasketID,
+                BasketProductCount = z.BasketProductCount,
+                MenuTableID = z.MenuTableID,
+                ProductPrice = z.Product.ProductPrice,
+                ProductID = z.ProductID,
+                BasketProductTotalPrice = z.BasketProductTotalPrice,
+                ProductName = z.Product.ProductName
+            }).ToList();
+            return Ok(values);
+        }
     }
 }
