@@ -2,7 +2,7 @@
 
 namespace SignalRWebUI.Controllers
 {
-    public class DefaultCorntroller : Controller
+    public class DefaultController : Controller
     {
         public IActionResult Index()
         {
