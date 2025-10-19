@@ -23,7 +23,6 @@ namespace SignalRWebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(CreateBookingDto createBookingDto)
         {
-            createBookingDto.BookingPersonCount = 2;
 
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createBookingDto);
